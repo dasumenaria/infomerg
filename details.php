@@ -1,14 +1,14 @@
-<?php 
-include("function.php");
+<?php include('function.php');
 include("config.php");
 
-  $user_id=$_GET['id'];
+   $user_id=$_GET['id'];
  
- 
-
 ?>
+ 
+<?php head();?>
 
-<?php
+<?php contain_start();?>
+ <?php
 							$query=mysql_query("select * from `users` where `id`='".$user_id."' and flag=0 ");
 							$fetch=mysql_fetch_array($query); 
 							{
@@ -51,7 +51,7 @@ include("config.php");
 
 
 
-<div style="padding:10px;">
+<div style="padding:11px; background: #F1F3FA !important">
  <div class="row">
  <div class="col-md-3">
  <div class="profile-sidebar">
@@ -231,8 +231,8 @@ include("config.php");
  </div> 
  </div>
  
-
-
  
-	 
-  
+ 
+ 
+<?php footer();?>
+

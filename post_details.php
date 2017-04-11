@@ -9,29 +9,29 @@ include("config.php");
 <div class="portlet box blue" >
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-edit"></i>User's
+								<i class="fa fa-edit"></i>Posts
 							</div>
 							 
 						</div>
 						<div class="portlet-body" id="suv_category_result">
 							<div class="table-toolbar">
 								<div class="row">
-								<div class="col-md-2">
-								<!------Areawise------->
+								<!--<div class="col-md-2">
+								 ------Areawise------- 
 										<div class="form-group">
 											<label class="control-label">Select State</label>
 											<select class="select2_category form-control ids" data-placeholder="Choose a Category" tabindex="1">
 												<option value="Category 1">Select State</option>
 												<?php
-												$query_state=mysql_query("select * from `states` order by id Asc ");
+												/*$query_state=mysql_query("select * from `states` order by id Asc ");
 												 while($fetch_state=mysql_fetch_array($query_state)) 
 												{
 												$i++;
 												$id=$fetch_state['id'];
 												$name=$fetch_state['name'];
-												?>
+												*/?>
 												<option value="<?php echo $id;?>"><?php echo $name;?></option>
-											<?php  } ?>
+											<?php /* }*/ ?>
 										</select>
 										</div>
 								</div>
@@ -43,8 +43,8 @@ include("config.php");
 								</div>
 									
 									 
-									<!------datewise------->
-									<!--<div class="col-md-6">
+									 ------datewise----- 
+									 --<div class="col-md-6">
 									 <div class="form-group">
 										<label class="control-label col-md-3">Date Range</label>
 										<div class="col-md-4">
@@ -59,44 +59,48 @@ include("config.php");
 										</div>
 									</div>
 									 
-									</div >-->
+									</div >-- 
 									 
-								</div>
+								</div>-->
 							</div>
 							<table class="table table-striped table-hover table-bordered area_wise" id="sample_editable_1">
 							<thead>
 										<tr>
 											<th>S/No.</th>
 											<th>Username</th>
-											<th class="hidden-phone">Email</th>
-											<th class="hidden-phone">Mobile_no</th>
+											<th class="hidden-phone">Create Date & Time</th>
+											<th class="hidden-phone">post Images</th>
 										<!--<th class="hidden-phone">Photo</th>-->
-											<th class="hidden-phone">More</th>
+ 
 										
 										 
 										</tr>
 									</thead>
 							<tbody>
 										<?php
-							$query=mysql_query("select * from `users` where flag=0 ");
+							$query=mysql_query("select * from `posts` order by id Desc");
 							$i=0;
 							while($fetch=mysql_fetch_array($query))
 							{
 							$i++;
 							$id=$fetch['id'];
-							$name=$fetch['name'];
-							$email=$fetch['email'];
-							$mobile=$fetch['mobile'];
-							$profile_pic=$fetch['profile_pic'];
+							$created_on=$fetch['created_on'];
+							$post_image=$fetch['post_image'];
+							$user_id=$fetch['user_id'];
+							$query1=mysql_query("select * from `users` where id='$user_id'");
+						    $fetch1=mysql_fetch_array($query1); 
+							$name=$fetch1['name'];
+								
+							
 							
 							?>
 										<tr class="odd gradeX">
 											<td><?php echo $i;?></td>
 											<td><?php echo $name;?></td>
-											<td class="hidden-phone"><a href="mailto:shuxer@gmail.com"><?php echo $email;?></a></td>
-											<td class="hidden-phone"><?php echo $mobile;?></td>
-											<!--<td class="center hidden-phone"><img src="upload/<?php echo $profile_pic;?>" width='100px' height='100px'></td>-->
-											 <th class="hidden-phone"><a href="details.php?id=<?php echo $id;?>" class="btn btn-xs yellow" >Details <i class="fa fa-search"></i></a></th>
+											<td class="hidden-phone"> <?php echo $created_on;?> </td>
+							 
+											 <td class="center hidden-phone"><img src="upload/<?php echo $post_image;?>" width='50px' height='50px'></td> 
+ 
 										</tr>
 							<?php } ?>		 
 									</tbody>
