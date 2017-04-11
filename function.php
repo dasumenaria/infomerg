@@ -21,12 +21,16 @@
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
 <link href="assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" type="text/css" href="assets/global/plugins/bootstrap-datepicker/css/datepicker3.css"/>
 <link href="assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
 <link href="assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 <link href="assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
 <!-- END PAGE STYLES -->
+
+<link rel="stylesheet" type="text/css" href="assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
 <!-- BEGIN THEME STYLES -->
 <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
 <link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
@@ -49,11 +53,9 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html">
-			<img src="assets/admin/layout/img/1.png" alt="logo" class="logo-default"/>
-			INFORMER G
-			</a>
-			<div class="menu-toggler sidebar-toggler hide">
+			<a href="index.html"><img src="img/1.png" alt="logo" class="logo-default"/ width="40px" height="40px" style="margin-top:2px;"></a>
+			<span style="color:#ffffff;font-size:24px;padding-left: 5px;"> INFORMER G</span>
+			 <div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
 			</div>
 		</div>
@@ -71,7 +73,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 					<img alt="" class="img-circle" src="assets/admin/layout/img/avatar3_small.jpg"/>
 					<span class="username username-hide-on-mobile">
-					Nick </span>
+					Admin</span>
 					<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-default">
@@ -79,29 +81,10 @@
 							<a href="extra_profile.html">
 							<i class="icon-user"></i> My Profile </a>
 						</li>
-						<li>
-							<a href="page_calendar.html">
-							<i class="icon-calendar"></i> My Calendar </a>
-						</li>
-						<li>
-							<a href="inbox.html">
-							<i class="icon-envelope-open"></i> My Inbox <span class="badge badge-danger">
-							3 </span>
-							</a>
-						</li>
-						<li>
-							<a href="page_todo.html">
-							<i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
-							7 </span>
-							</a>
-						</li>
+						 
 						<li class="divider">
 						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-lock"></i> Lock Screen </a>
-						</li>
-						<li>
+						 <li>
 							<a href="login.html">
 							<i class="icon-key"></i> Log Out </a>
 						</li>
@@ -138,10 +121,18 @@
  
 					</form>
 				 </li>
-				<li class="start active open">
-					<a href="javascript:;">
+				 <li class="start active open">
+				 <a href="index.php">
 					<i class="icon-home"></i>
 					<span class="title">Dashboard</span>
+					<span class="selected"></span>
+					 
+					</a>
+				 <li>
+				<li >
+					<a href="index.php">
+					<i class="icon-home"></i>
+					<span class="title">User Report</span>
 					<span class="selected"></span>
 					<span class="arrow open"></span>
 					</a>
@@ -152,12 +143,12 @@
 							User Report</a>
 						</li>
 						<li>
-							<a href="index_2.html">
+							<a href="user_list.php">s
 							<i class="icon-bulb"></i>
 							All Users</a>
 						</li>
 						<li>
-							<a href="index_3.html">
+							<a href="categories.php">
 							<i class="icon-graph"></i>
 							 Categories</a>
 						</li>
@@ -210,26 +201,11 @@ function footer(){ ?>
 <script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <!-- END CORE PLUGINS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
-<script src="assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery.pulsate.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/bootstrap-daterangepicker/moment.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-<!-- IMPORTANT! fullcalendar depends on jquery-ui-1.10.3.custom.min.js for drag & drop support -->
-<script src="assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script><!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
@@ -237,21 +213,15 @@ function footer(){ ?>
 <script src="assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
 <script src="assets/admin/pages/scripts/index.js" type="text/javascript"></script>
 <script src="assets/admin/pages/scripts/tasks.js" type="text/javascript"></script>
+<script src="assets/admin/pages/scripts/components-pickers.js"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {    
-   Metronic.init(); // init metronic core componets
-   Layout.init(); // init layout
-   QuickSidebar.init(); // init quick sidebar
-   Demo.init(); // init demo features 
-   Index.init();   
-   Index.initDashboardDaterange();
-   Index.initJQVMAP(); // init index page's custom scripts
-   Index.initCalendar(); // init index page's custom scripts
-   Index.initCharts(); // init index page's custom scripts
-   Index.initChat();
-   Index.initMiniCharts();
-   Tasks.initDashboardWidget();
+	Metronic.init(); // init metronic core components
+	Layout.init(); // init current layout
+	QuickSidebar.init(); // init quick sidebar
+	Demo.init(); // init demo features
+	ComponentsPickers.init();
 });
 </script>
 <!-- END JAVASCRIPTS -->

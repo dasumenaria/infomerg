@@ -44,7 +44,7 @@ $all_followers=mysql_num_rows($fet_followers);
 									User
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="user_list.php">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
