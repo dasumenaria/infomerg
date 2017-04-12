@@ -69,7 +69,7 @@
 			<ul class="nav navbar-nav pull-right">
   
 				 
-				<li class="dropdown dropdown-user">
+				<!--<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 					<img alt="" class="img-circle" src="assets/admin/layout/img/avatar3_small.jpg"/>
 					<span class="username username-hide-on-mobile">
@@ -89,7 +89,7 @@
 							<i class="icon-key"></i> Log Out </a>
 						</li>
 					</ul>
-				</li>
+				</li>-->
 				 
 			</ul>
 		</div>
@@ -143,7 +143,7 @@
 							User Report</a>
 						</li>
 						<li>
-							<a href="user_list.php">s
+							<a href="user_list.php"> 
 							<i class="icon-bulb"></i>
 							All Users</a>
 						</li>
@@ -214,6 +214,7 @@ function footer(){ ?>
 <script src="assets/admin/pages/scripts/index.js" type="text/javascript"></script>
 <script src="assets/admin/pages/scripts/tasks.js" type="text/javascript"></script>
 <script src="assets/admin/pages/scripts/components-pickers.js"></script>
+
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {    
@@ -224,6 +225,7 @@ jQuery(document).ready(function() {
 	ComponentsPickers.init();
 });
 </script>
+
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

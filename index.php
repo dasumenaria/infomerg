@@ -1,3 +1,4 @@
+
 <?php include('function.php');
 include("config.php");
 ?>
@@ -104,7 +105,125 @@ $all_followers=mysql_num_rows($fet_followers);
 					</div>
 				</div>
 			</div>
- 		
+<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>Category Wise Post Report
+							</div>
+							 
+						</div>
+						<div class="portlet-body">
+							<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>		 
+						</div>
+					</div>										
 			
 <?php footer();?>
+<?php
+$count_post_arrayall=array();
+$cate=mysql_query("select * from `templete_categories` ORDER BY ID ASC" );
+$y=0;
+ while($ave_cate=mysql_fetch_array($cate)) 
+{
+ $count_post_array=array();
+$t_id=$ave_cate['id'];
 
+
+ 	$total_month=12;
+    $currnt_year=date('Y');
+    for($x=1;$x<=$total_month;$x++)
+    {
+     $total_month_leave=0;
+     $total_month_absent=0;
+     $total_month_prsent=0;
+     $total_month_working=0;
+     $total_month_holiday=0;
+     
+     $first_date='01-'.$x.'-'.$currnt_year;
+     $first_date=date('Y-m-d',strtotime($first_date));
+     $last_date=date('Y-m-t',strtotime($first_date));
+ 	 $set=mysql_query("select `id` from `posts` where `templet_id`='$t_id' && `created_on` BETWEEN '$first_date' AND '$last_date'"); 
+ 	 $count_post_array[]=mysql_num_rows($set);
+	 
+	}
+	$count_post_arrayall[$y]=$count_post_array;
+ 	
+	$y++;
+}
+$condolance=$count_post_arrayall[0]; 
+ $condolanceArray=implode(', ',$condolance);
+$congratulations=$count_post_arrayall[1]; 
+ $congratulationsArray=implode(', ',$congratulations);
+$invitation=$count_post_arrayall[2]; 
+ $invitationArray=implode(', ',$invitation);
+
+ ?>
+
+ 
+<style type="text/css">
+	${demo.css}
+</style>
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Category Wise Post'
+        },
+         
+        xAxis: {
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'POST'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.1,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Condolence',
+            data: [<?php echo $condolanceArray; ?>]
+
+        }, {
+            name: 'Congratulationss',
+            data: [<?php echo $congratulationsArray; ?>]
+
+        }, {
+            name: 'Invitation',
+            data: [<?php echo $invitationArray?>]
+
+        }]
+    });
+});
+</script>
+<script src="js/highcharts.js"></script>
