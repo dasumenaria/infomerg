@@ -108,20 +108,4 @@ include("config.php");
 						</div>
 					</div>
 <?php footer();?>
-<script>
-  $('.ids').on('change', function(){
-	  
-	   
-	var ids = $(this).val();  
  
-	$.ajax({
-			url: "city_ajax.php?id="+ids,
-			type: "POST",
-			success: function(data)
-			{   
-				  $('#cites_fet').html(data);
-			}
-		});
-   });
-  </script>
-  

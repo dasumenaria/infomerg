@@ -98,11 +98,13 @@ $all_followers=mysql_num_rows($fet_followers);
 								Followers
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="followers.php">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
 				</div>
 			</div>
+ 		
+			
 <?php footer();?>
 
