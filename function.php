@@ -53,7 +53,7 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html"><img src="img/1.png" alt="logo" class="logo-default"/ width="40px" height="40px" style="margin-top:2px;"></a>
+			<a href="index.php"><img src="img/1.png" alt="logo" class="logo-default"/ width="40px" height="40px" style="margin-top:2px;"></a>
 			<span style="color:#ffffff;font-size:24px;padding-left: 5px;"> INFORMER G</span>
 			 <div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
