@@ -129,8 +129,8 @@
 					 
 					</a>
 				 <li>
-				<li >
-					<a href="index.php">
+				<li>
+					<a href="#">
 					<i class="icon-home"></i>
 					<span class="title">User Report</span>
 					<span class="selected"></span>
@@ -154,7 +154,7 @@
 						</li>
 					</ul>
 				</li>
-				 
+				  
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

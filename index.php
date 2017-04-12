@@ -157,14 +157,9 @@ $invitation=$count_post_arrayall[2];
  $invitationArray=implode(', ',$invitation);
 
  ?>
-
- 
-<style type="text/css">
-	${demo.css}
-</style>
-<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="js/highcharts.js"></script>
 <script type="text/javascript">
-$(function () {
+ 
     $('#container').highcharts({
         chart: {
             type: 'column'
@@ -224,6 +219,6 @@ $(function () {
 
         }]
     });
-});
+ 
 </script>
-<script src="js/highcharts.js"></script>
+
