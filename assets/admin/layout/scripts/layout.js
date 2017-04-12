@@ -116,7 +116,7 @@ var Layout = function () {
     // Handle sidebar menu
     var handleSidebarMenu = function () {
         // handle sidebar link click
-        jQuery('.page-sidebar').on('click', 'li > a', function (e) {
+        $('.page-sidebar').on('click', 'li > a', function (e) {
             var hasSubMenu = $(this).next().hasClass('sub-menu');
 
             if (Metronic.getViewPort().width >= resBreakpointMd && $(this).parents('.page-sidebar-menu-hover-submenu').size() === 1) { // exit of hover sidebar menu
@@ -137,7 +137,7 @@ var Layout = function () {
             var parent = $(this).parent().parent();
             var the = $(this);
             var menu = $('.page-sidebar-menu');
-            var sub = jQuery(this).next();
+            var sub = $(this).next();
 
             var autoScroll = menu.data("auto-scroll");
             var slideSpeed = parseInt(menu.data("slide-speed"));
@@ -152,8 +152,8 @@ var Layout = function () {
             var slideOffeset = -200;
 
             if (sub.is(":visible")) {
-                jQuery('.arrow', jQuery(this)).removeClass("open");
-                jQuery(this).parent().removeClass("open");
+                $('.arrow', $(this)).removeClass("open");
+                $(this).parent().removeClass("open");
                 sub.slideUp(slideSpeed, function () {
                     if (autoScroll === true && $('body').hasClass('page-sidebar-closed') === false) {
                         if ($('body').hasClass('page-sidebar-fixed')) {
@@ -167,8 +167,8 @@ var Layout = function () {
                     handleSidebarAndContentHeight();
                 });
             } else if (hasSubMenu) {
-                jQuery('.arrow', jQuery(this)).addClass("open");
-                jQuery(this).parent().addClass("open");
+                $('.arrow', $(this)).addClass("open");
+                $(this).parent().addClass("open");
                 sub.slideDown(slideSpeed, function () {
                     if (autoScroll === true && $('body').hasClass('page-sidebar-closed') === false) {
                         if ($('body').hasClass('page-sidebar-fixed')) {
@@ -187,12 +187,12 @@ var Layout = function () {
         });
 
         // handle ajax links within sidebar menu
-        jQuery('.page-sidebar').on('click', ' li > a.ajaxify', function (e) {
+        $('.page-sidebar').on('click', ' li > a.ajaxify', function (e) {
             e.preventDefault();
             Metronic.scrollTop();
 
             var url = $(this).attr("href");
-            var menuContainer = jQuery('.page-sidebar ul');
+            var menuContainer = $('.page-sidebar ul');
             var pageContent = $('.page-content');
             var pageContentBody = $('.page-content .page-content-body');
 
@@ -236,7 +236,7 @@ var Layout = function () {
         });
 
         // handle ajax link within main content
-        jQuery('.page-content').on('click', '.ajaxify', function (e) {
+        $('.page-content').on('click', '.ajaxify', function (e) {
             e.preventDefault();
             Metronic.scrollTop();
 
@@ -267,6 +267,11 @@ var Layout = function () {
                 }
             });
         });
+
+        // handle scrolling to top on responsive menu toggler click when header is fixed for mobile view
+        $(document).on('click', '.page-header-fixed-mobile .page-header .responsive-toggler', function(){
+            Metronic.scrollTop(); 
+        });      
      
         // handle sidebar hover effect        
         handleFixedSidebarHoverEffect();

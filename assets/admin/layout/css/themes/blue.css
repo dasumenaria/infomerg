@@ -3,7 +3,8 @@ Page Header
 ***********/
 /* Header search bar, toggler button & top menu */
 .page-header.navbar {
-  background-color: #2D5F8B;
+	/*background-color: #ECECEC;*/
+ background-color: #2b3643;
   /* Top notification menu/bar */
   /* Header seaech box */
   /* Toggler button for sidebar expand/collapse and responsive sidebar menu */
@@ -43,10 +44,11 @@ Page Header
   border-bottom-color: #eaedf2;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu > li.external {
-  background: #eaedf2;
+  background: #305778;
+  color:#FFF !important;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu > li.external > h3 {
-  color: #62878f;
+  color: #FFF;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu > li.external > a {
   color: #5b9bd1;
@@ -61,12 +63,6 @@ Page Header
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu .dropdown-menu-list > li > a:hover {
   background: #f8f9fa;
-}
-.page-header.navbar .top-menu .navbar-nav > li.dropdown-notification .dropdown-menu .dropdown-menu-list > li > a .time {
-  background: #f1f1f1;
-}
-.page-header.navbar .top-menu .navbar-nav > li.dropdown-notification .dropdown-menu .dropdown-menu-list > li > a:hover .time {
-  background: #e4e4e4;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-inbox > .dropdown-toggle > .circle {
   background-color: #d64635;
@@ -323,10 +319,8 @@ Page Header
 /* Page sidebar */
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover,
 .page-sidebar {
-  background-color: #4276A4;
-  /* Default sidebar */
-  /* light sidebar */
-  /* Sidebar search */
+  background-color: #364150;
+   
 }
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu,
 .page-sidebar .page-sidebar-menu {
@@ -360,7 +354,8 @@ Page Header
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li:hover > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > a,
 .page-sidebar .page-sidebar-menu > li:hover > a,
 .page-sidebar .page-sidebar-menu > li.open > a {
-  background: #497FAE;
+  height:48px;
+  background: #366187;
   color: #C9DFF5;
 }
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li:hover > a > i, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > a > i,
@@ -845,6 +840,7 @@ Page Footer
     border-top: 1px solid #4276A4;
   }
   .page-sidebar .page-sidebar-menu > li:hover > a, .page-sidebar .page-sidebar-menu > li.open > a {
+	  height:48px;
     background: #366187;
   }
   .page-sidebar .page-sidebar-menu > li:last-child > a {
@@ -900,7 +896,7 @@ Page Footer
 Boby
 ****/
 body {
-  background-color: #4276A4;
+ /* background-color: #2b3643;*/
 }
 
 /****

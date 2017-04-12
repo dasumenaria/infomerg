@@ -879,7 +879,7 @@ var Metronic = function() {
             var sizes = {
                 'xs' : 480,     // extra small
                 'sm' : 768,     // small
-                'md' : 900,     // medium
+                'md' : 992,     // medium
                 'lg' : 1200     // large
             };
 

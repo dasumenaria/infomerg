@@ -511,12 +511,18 @@ Toastr Notifications
   left: 50%;
   margin-left: -150px;
 }
+.toast-top-center .toast {
+  margin: 0 !important;
+}
 
 .toast-bottom-center {
   bottom: 12px;
   margin: 0 auto;
   left: 50%;
   margin-left: -150px;
+}
+.toast-bottom-center .toast {
+  margin: 0 !important;
 }
 
 /***
@@ -687,6 +693,28 @@ Error state for WYSIWYG Editors
 
 .has-warning .note-editor {
   border: 1px solid #faebcc !important;
+}
+
+/***
+Bootstrap GtreeTable
+***/
+.gtreetable .dropdown-menu {
+  margin-top: 0px;
+}
+.gtreetable .dropdown-menu:after, .gtreetable .dropdown-menu:before {
+  display: none !important;
+}
+.gtreetable .node-action .form-control {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+}
+.gtreetable .node-icon-selected,
+.gtreetable .node-icon-handle,
+.gtreetable .node-icon-ce,
+.gtreetable .node-icon-type {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 
 /***

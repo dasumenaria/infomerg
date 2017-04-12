@@ -1,6 +1,6 @@
 @media print {
   body {
-    background-color: #fff !important;
+    background-color: #305778 !important;
   }
 
   .page-bar {
@@ -53,8 +53,8 @@ Page Header
   border: 0px;
   padding: 0px;
   box-shadow: none;
-  height: 46px;
-  min-height: 46px;
+  height: 60px;
+  min-height: 60px;
   filter: none;
   background-image: none;
   /* Fixed header */
@@ -177,6 +177,7 @@ Page Header
   padding: 0;
   margin-right: 20px;
   display: block;
+  margin-top: 5px;
   /* Extended Dropdowns */
   /* Notification */
   /* Inbox */
@@ -302,7 +303,7 @@ Page Header
   line-height: 20px;
   white-space: normal;
   font-size: 13px;
-  padding: 16px 15px 18px;
+  padding: 10px 10px 10px;
   text-shadow: none;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu .dropdown-menu-list > li > a:hover {
@@ -331,8 +332,8 @@ Page Header
   right: 15px;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-notification .dropdown-menu .dropdown-menu-list > li a .time {
-  float: right;
-  max-width: 75px;
+  /*float: right;*/
+  margin-left:25px;
   font-size: 11px;
   font-weight: 400;
   opacity: 0.7;
@@ -866,7 +867,7 @@ Page container
   clear: both;
 }
 .page-header-fixed .page-container {
-  margin-top: 46px;
+  margin-top: 60px;
 }
 .page-footer-fixed.page-footer-fixed-mobile .page-container {
   margin-bottom: 20px !important;
@@ -963,7 +964,7 @@ Page sidebar
   position: relative;
   margin: 0;
   border: 0px;
-  padding: 10px 15px;
+  padding: 14px 15px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 300;
@@ -1027,13 +1028,13 @@ Page sidebar
   float: right;
   position: absolute;
   right: 0px;
-  top: 8px;
+  top: 5px;
   background: none;
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-right: 12px solid #ffffff;
+  border-top: 22px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 17px solid #ffffff;
 }
 .page-sidebar-reversed .page-sidebar .page-sidebar-menu > li.active > a > .selected, .page-sidebar-reversed
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a > .selected {
@@ -1055,8 +1056,8 @@ Page sidebar
   float: right;
   width: 10px;
   text-align: center;
-  margin-top: -1px;
-  margin-right: 5px;
+  margin-top: 4px;
+  margin-right: 10px;
   margin-left: 5px;
   display: inline;
   font-size: 16px;
@@ -1097,7 +1098,7 @@ Page sidebar
   margin: 0;
   padding: 6px 15px 6px 43px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   background: none;
 }
@@ -1269,10 +1270,13 @@ Page sidebar
   .page-sidebar-fixed .page-sidebar {
     position: fixed !important;
     margin-left: 0;
-    top: 46px;
+    top: 60px;
   }
   .page-sidebar-fixed .page-sidebar-menu > li.last {
     margin-bottom: 15px !important;
+  }
+  .page-sidebar-fixed .page-sidebar-menu .sub-menu {
+    height: auto !important;
   }
 
   /* Sidebar Closed */
@@ -2420,9 +2424,8 @@ Page footer
 }
 .scroll-to-top > i {
   display: inline-block;
-  color: #687991;
+  color: #305778;
   font-size: 30px;
-  opacity: 0.6;
   filter: alpha(opacity=60);
 }
 .scroll-to-top:hover {

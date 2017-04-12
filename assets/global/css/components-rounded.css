@@ -14,6 +14,8 @@ body {
   direction: ltr;
 }
 
+
+
 /*
  Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't 
  properly apply the media queries in Bootstrap's CSS. To address this, 
@@ -1748,7 +1750,7 @@ Dropdown Menu
   padding: 0px;
   margin: 10px  0px 0px 0px;
   background-color: #fffff;
-  box-shadow: 5px 5px rgba(102, 102, 102, 0.1);
+  /*box-shadow: 5px 5px rgba(102, 102, 102, 0.1);*/
   border: 1px solid #eee;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-border-radius: 4px;
@@ -1813,6 +1815,7 @@ Dropdown Menu
   border-right: 8px solid transparent;
   border-bottom: 8px solid #e0e0e0;
   border-left: 8px solid transparent;
+  border-radius: 0px !important;
   content: '';
 }
 .dropdown > .dropdown-menu:after,
@@ -12636,3 +12639,7 @@ Transparent Button
   background: transparent;
   color: #888;
 }
+
+
+
+
