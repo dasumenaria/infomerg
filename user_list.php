@@ -50,14 +50,13 @@ include("config.php");
 										<label class="control-label col-md-12">Date Range</label>
 										<div class="col-md-4">
 											<div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
-												<input type="text" class="form-control" name="from">
+												<input type="text" class="form-control chk_input" name="from" id="from">
 												<span class="input-group-addon">
 												to </span>
-												<input type="text" class="form-control" name="to">
+												<input type="text" class="form-control chk_input" name="to" id="to">
 											</div>
 											<!-- /input-group -->
-											<span class="help-block">
-											Select date range </span>
+											 
 										</div>
 									</div>
 								</div>	 
@@ -120,4 +119,19 @@ include("config.php");
 		});
    });
   </script>
-  
+
+  <!---For From date--->  
+<script>
+  $('.chk_input').on('change', function(){
+	  alert();
+	var froms= $('#from').val();			   
+	 var tos= $('#to').val();
+		
+			$.ajax({
+		url: "date_wise.php?from="+froms+"&to="+tos,
+		}).done(function(response){
+				$(".area_wise").html(""+response+"");
+		});
+	 
+   });
+  </script>
